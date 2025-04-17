@@ -1,18 +1,33 @@
 import React from 'react';
-import { FaUtensils, FaWineGlassAlt, FaIceCream, FaGlassCheers } from 'react-icons/fa';
+//import { FaUtensils, FaHamburger , FaIceCream, FaGlassCheers } from 'react-icons/fa';
+
+import { 
+  FaHamburger,        // Burger icon
+  FaPizzaSlice,       // Pizza icon
+  FaLeaf,             // Salad icon
+  FaCocktail,         // Drinks icon
+  FaConciergeBell     // Appetizer icon (best-fit)
+} from 'react-icons/fa';
+import { GiBarbecue, GiMeat  } from "react-icons/gi";
 
 const getCategoryIcon = (sectionTitle) => {
-  switch(sectionTitle) {
-    case 'Appetizers':
-      return <FaUtensils />;
-    case 'Main Courses':
-      return <FaUtensils />;
-    case 'Desserts':
-      return <FaIceCream />;
-    case 'Drinks':
-      return <FaGlassCheers />;
+  switch (sectionTitle) {
+    case 'البرجر':
+      return <FaHamburger />;
+    case 'الشاورما':
+      return <GiMeat   />;
+    case 'البيتزا والفطائر':
+      return <FaPizzaSlice />;
+    case 'المشاوي':
+      return <GiBarbecue  />;
+    case 'السلطات':
+      return <FaLeaf />;
+    case 'الطلبات الجانبية':
+      return <FaConciergeBell />;
+    case 'المشروبات':
+      return <FaCocktail />;
     default:
-      return <FaWineGlassAlt />;
+      return <FaHamburger />;
   }
 };
 
