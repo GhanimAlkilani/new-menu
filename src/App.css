@@ -177,7 +177,6 @@ body {
   color: var(--primary-color);
   font-size: 1.2rem;
 }
-
 /* Responsive Design */
 @media (max-width: 992px) {
   .menu-container {
