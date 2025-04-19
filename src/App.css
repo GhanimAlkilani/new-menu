@@ -70,6 +70,7 @@ body {
   width: 250px;
   padding: 1rem;
   box-shadow: var(--shadow);
+  direction: rtl;
 }
 
 .category-nav ul {
