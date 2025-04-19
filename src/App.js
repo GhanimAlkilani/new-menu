@@ -4,15 +4,18 @@ import CategoryNav from './components/CategoryNav';
 import MenuSection from './components/MenuSection';
 import CategoryNav2 from './components/CategoryNav2';
 import MenuSection2 from './components/MenuSection2';
+import CategoryNav3 from './components/CategoryNav3';
+import MenuSection3 from './components/MenuSection3';
 import './App.css';
-import './App2.css'; // New design styles
+import './App2.css';
+import './App3.css';
 
 function App() {
   const [activeSectionId, setActiveSectionId] = useState(1);
   const [sections, setSections] = useState([]);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [designVersion, setDesignVersion] = useState(1); // 1 or 2
+  const [designVersion, setDesignVersion] = useState(1); // 1, 2, or 3
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,13 +42,19 @@ function App() {
             onClick={() => setDesignVersion(1)} 
             className={designVersion === 1 ? 'active' : ''}
           >
-            Design 1
+            Classic
           </button>
           <button 
             onClick={() => setDesignVersion(2)} 
             className={designVersion === 2 ? 'active' : ''}
           >
-            Design 2
+            Modern
+          </button>
+          <button 
+            onClick={() => setDesignVersion(3)} 
+            className={designVersion === 3 ? 'active' : ''}
+          >
+            Premium
           </button>
         </div>
       </header>
@@ -65,7 +74,7 @@ function App() {
               />
             </div>
           </>
-        ) : (
+        ) : designVersion === 2 ? (
           <>
             <CategoryNav2 
               sections={sections} 
@@ -74,6 +83,20 @@ function App() {
             />
             <div className="menu-content">
               <MenuSection2 
+                section={activeSection} 
+                products={sectionProducts} 
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <CategoryNav3 
+              sections={sections} 
+              activeSectionId={activeSectionId}
+              setActiveSectionId={setActiveSectionId}
+            />
+            <div className="menu-content">
+              <MenuSection3 
                 section={activeSection} 
                 products={sectionProducts} 
               />
