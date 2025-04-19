@@ -1,0 +1,203 @@
+/* Design 4 - Coffee Shop Theme */
+.design-4 {
+    --primary-color: #6F4E37; /* Coffee brown */
+    --secondary-color: #C4A484; /* Latte cream */
+    --accent-color: #D2B48C; /* Tan */
+    --light-bg: #F5F5DC; /* Beige */
+    --card-bg: #FFFFFF;
+    --text-dark: #3E2723; /* Dark brown */
+    --text-light: #FFF8E1;
+  }
+  
+  /* Base Layout */
+  .design-4 .app-header {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 8px solid var(--accent-color);
+  }
+  
+  .design-4 .restaurant-menu-app {
+    background-color: var(--light-bg);
+    min-height: 100vh;
+  }
+  
+  .design-4 .menu-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Category Navigation */
+  .design-4 .category-nav-4 {
+    background: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .design-4 .category-scroll-4 {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: rtl;
+  }
+  
+  .design-4 .category-btn-4 {
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .design-4 .category-btn-4.active {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  /* Menu Content */
+  .design-4 .menu-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .design-4 .menu-section-4 {
+    margin-bottom: 3rem;
+  }
+  
+  .design-4 .section-header-4 {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .design-4 .section-header-4 h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background: var(--secondary-color);
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  .design-4 .section-header-4 p {
+    color: var(--text-dark);
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  
+  /* Menu Items */
+  .design-4 .menu-items-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .design-4 .menu-item-4 {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+  }
+  
+  .design-4 .menu-item-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .design-4 .item-image-4 {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .design-4 .item-image-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .design-4 .menu-item-4:hover .item-image-4 img {
+    transform: scale(1.05);
+  }
+  
+  .design-4 .item-details-4 {
+    padding: 1.25rem;
+  }
+  
+  .design-4 .item-details-4 h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .design-4 .item-price-4 {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+  }
+  
+  .design-4 .item-details-4 p {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+  
+  /* Design Toggle */
+  .design-4 .design-toggle {
+    margin-top: 1rem;
+  }
+  
+  .design-4 .design-toggle button {
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+    background: transparent;
+  }
+  
+  .design-4 .design-toggle button.active {
+    background: var(--text-light);
+    color: var(--primary-color);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .design-4 .menu-items-4 {
+      grid-template-columns: 1fr;
+    }
+    
+    .design-4 .section-header-4 h2 {
+      font-size: 1.5rem;
+      padding: 0.5rem 1.5rem;
+    }
+    
+    .design-4 .menu-content {
+      padding: 1.5rem;
+    }
+  }
