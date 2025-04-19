@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 /* Base Styles */
 :root {
   --primary-color: #d4af37;
@@ -16,7 +17,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Cairo', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;

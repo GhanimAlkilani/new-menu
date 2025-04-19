@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 /* Design 3 - Fixed Layout */
 .design-3 {
   --primary-color: #6a11cb;
@@ -54,8 +55,7 @@
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+  font-family: 'Cairo', sans-serif;
 }
 
 .design-3 .category-btn-3.active {
